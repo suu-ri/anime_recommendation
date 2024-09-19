@@ -1,84 +1,90 @@
+/* 全局样式 */
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* 背景颜色 */
 }
 
-h1, h2 {
-    color: #333;
-}
-
-form {
-    background: #fff;
+/* 容器样式 */
+.container {
+    width: 90%; /* 容器宽度 */
+    max-width: 600px; /* 最大宽度 */
+    margin: 50px auto; /* 居中容器 */
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #fff; /* 背景颜色 */
+    border-radius: 8px; /* 圆角边框 */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* 阴影效果 */
 }
 
+/* 标题样式 */
+h1 {
+    color: #333; /* 标题颜色 */
+    text-align: center; /* 标题居中 */
+    margin-bottom: 20px; /* 标题下方间距 */
+}
+
+/* 表单组样式 */
+.form-group {
+    margin-bottom: 15px; /* 表单组之间的间距 */
+}
+
+/* 标签样式 */
 label {
-    display: block;
-    margin: 10px 0 5px;
+    display: block; /* 标签块级显示 */
+    margin-bottom: 5px; /* 标签与输入框之间的间距 */
 }
 
+/* 输入框样式 */
 input[type="text"],
 input[type="number"],
 textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    width: calc(100% - 20px); /* 输入框宽度100%减去内边距 */
+    padding: 10px; /* 输入框内边距 */
+    border: 1px solid #ccc; /* 边框颜色 */
+    border-radius: 4px; /* 圆角边框 */
 }
 
+/* 按钮样式 */
 button {
-    background: #5cb85c;
-    color: white;
+    width: 100%; /* 按钮宽度100% */
+    background: #007bff; /* 按钮背景颜色 */
+    color: white; /* 按钮文字颜色 */
     border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
+    padding: 10px;
+    border-radius: 5px; /* 圆角按钮 */
     cursor: pointer;
+    font-size: 16px; /* 字体大小 */
 }
 
 button:hover {
-    background: #4cae4c;
+    background: #0056b3; /* 悬停效果 */
 }
 
-ul {
+/* 推荐列表样式 */
+.recommendation-list {
     list-style-type: none;
     padding: 0;
 }
 
-li {
+.recommendation-list li {
     background: #fff;
     padding: 15px;
-    margin: 10px 0;
+    margin-bottom: 10px;
     border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 }
 
-a {
-    margin-right: 10px;
+.recommendation-list li p {
+    margin: 5px 0; /* 段落间距 */
+}
+
+/* 链接样式 */
+.edit, .delete {
     text-decoration: none;
-    color: #007bff;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: background 0.3s, color 0.3s;
+    color: #007bff; /* 链接颜色 */
 }
 
-a.edit {
-    background-color: #007bff;
-    color: white;
-}
-
-a.edit:hover {
-    background-color: #0056b3;
-}
-
-a.delete {
-    background-color: #d9534f;
-    color: white;
-}
-
-a.delete:hover {
-    background-color: #c9302c;
+.edit:hover, .delete:hover {
+    text-decoration: underline; /* 悬停时下划线效果 */
 }

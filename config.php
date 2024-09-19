@@ -1,5 +1,5 @@
 <!-- localhost version -->
-<!-- <?php
+<?php
 $host = 'localhost';
 $db = 'anime_recommendations';
 $user = 'root'; // Replace with your database username
@@ -11,10 +11,10 @@ try {
 } catch (PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
 }
-?> -->
+?>
 
 <!-- server version -->
-<?php
+<!-- <?php
 $host = '';
 $db = '';
 $user = ''; // Replace with your database username
@@ -26,4 +26,4 @@ try {
 } catch (PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
 }
-?>
+?> -->

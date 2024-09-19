@@ -1,5 +1,9 @@
 <?php
+include 'auth.php'; // 引入 auth.php
+checkUserSession(); // 调用会话检查函数
 include 'config.php';
+// 显示用户名
+displayUsername();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = $_POST['id'];
@@ -30,7 +34,17 @@ $recommendation = $stmt->fetch(PDO::FETCH_ASSOC);
 </head>
 <body>
     <h1>Edit Anime Recommendation</h1>
-    
+    <!-- 登出按钮 -->
+    <form action="" method="POST">
+        <button type="submit" name="logout">Logout</button>
+    </form>
+
+    <?php
+    // 处理登出请求
+    if (isset($_POST['logout'])) {
+        logoutUser(); // 调用登出函数
+    }
+    ?>
     <form action="edit.php" method="POST">
         <input type="hidden" name="id" value="<?php echo $recommendation['id']; ?>">
         <label for="title">Title:</label>

@@ -1,4 +1,6 @@
 <?php
+include 'auth.php'; // 引入 auth.php
+checkUserSession(); // 调用会话检查函数
 include 'config.php';
 
 $id = $_GET['id'];
