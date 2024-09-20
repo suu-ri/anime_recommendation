@@ -1,4 +1,4 @@
-# 課題8-anime recommendation
+# anime recommendation
 
 アニメおすすめアプリ
 
